@@ -26,13 +26,17 @@ public class Player : MonoBehaviour {
 
 	private int count; //fruit collecting count
 	public Text countText;
+	private int tokencount;
+	public Text tokencountText;
 
 	void Start () 
 	{
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 		anim = gameObject.GetComponent<Animator> ();
 		count = 0;
+		tokencount = 0;
 		SetCountText ();
+		SetTokenCountText ();
 
 	}
 	
@@ -137,11 +141,25 @@ public class Player : MonoBehaviour {
 			count = count + 1;
 			SetCountText ();
 		}
+		if (other.gameObject.CompareTag ("coin")) 
+		{
+			other.gameObject.SetActive (false);
+			tokencount = tokencount + 1;
+			SetTokenCountText ();
+
+		}
+			
 	}
+
+
 
 	void SetCountText()
 	{
 		countText.text = "Fruit: " + count.ToString ();
+	}
+	void SetTokenCountText()
+	{
+		tokencountText.text = "Token: " + tokencount.ToString ();
 	}
 
 

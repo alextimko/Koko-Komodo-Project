@@ -21,15 +21,15 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	void OnTriggerStay2D (Collider2D col) {
 		if (col.gameObject.tag == "Saw") {
-			healthBar.value -= 1.5f;
+			healthBar.value -= 4.5f;
 			curHealth = healthBar.value;
-			StartCoroutine (player.Knockback (0.02f, 50, player.transform.position));
+			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
 		}
 		if (col.gameObject.tag == "Spike") {
-			healthBar.value -= 1.2f;
+			healthBar.value -= 4.2f;
 			curHealth = healthBar.value;
-			StartCoroutine (player.Knockback (0.02f, 50, player.transform.position));
+			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
 		}
 	}

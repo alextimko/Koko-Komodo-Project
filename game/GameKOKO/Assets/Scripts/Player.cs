@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 	public float maxSpeed = 3;
@@ -22,10 +23,16 @@ public class Player : MonoBehaviour {
 	public float fireRate = 0.5f;
 	float nextFire = 0.5f;
 	// Use this for initialization
+
+	private int count; //fruit collecting count
+	public Text countText;
+
 	void Start () 
 	{
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 		anim = gameObject.GetComponent<Animator> ();
+		count = 0;
+		SetCountText ();
 
 	}
 	
@@ -116,10 +123,27 @@ public class Player : MonoBehaviour {
 		while (knockDur > timer) {
 			timer += Time.deltaTime;
 			rb2d.velocity = new Vector2 (0, 0);
-			rb2d.AddForce (new Vector3 (knockbackDir.x * -80, 150, transform.position.z));
+			rb2d.AddForce (new Vector3 (knockbackDir.x * -40, 80, transform.position.z));
 		}
 
 		yield return 0;
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag ("apple")) 
+		{
+			other.gameObject.SetActive (false);
+			count = count + 1;
+			SetCountText ();
+		}
+	}
+
+	void SetCountText()
+	{
+		countText.text = "Fruit: " + count.ToString ();
+	}
+
+
 
 }

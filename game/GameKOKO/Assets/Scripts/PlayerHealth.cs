@@ -11,8 +11,12 @@ public class PlayerHealth : MonoBehaviour {
 
 	private Player player;
 
+	private float timeInAir = 0;
+	private float timeDeath = 2f;
+
 	float maxHealth = 100;
 	float curHealth;
+
 
 	public GameObject GameOverText, RestartButton, meat;
 
@@ -50,12 +54,19 @@ public class PlayerHealth : MonoBehaviour {
 		if (curHealth <= 0) {
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
-			Time.timeScale = 0;
 		}
+			
 
 	}
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";
+		if (!player.grounded) {
+			timeInAir += Time.deltaTime;
+		}
+		if (timeInAir >= timeDeath) {
+			GameOverText.SetActive (true);
+			RestartButton.SetActive (true);
+		}
 	}
 	void redFlash () {
 		gameObject.GetComponent<Animation> ().Play ("Red_Flash");

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TestingGround.unity
+- path: Assets/Scenes/FirstIslandLVL2.unity
   isLoaded: 1
   isActive: 1

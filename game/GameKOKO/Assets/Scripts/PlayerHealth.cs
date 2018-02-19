@@ -60,10 +60,8 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";
-		if (!player.grounded) {
-			timeInAir += Time.deltaTime;
-		}
-		if (timeInAir >= timeDeath) {
+
+		if (player.transform.position.y < -5) {
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
 		}

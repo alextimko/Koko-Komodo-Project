@@ -14,7 +14,11 @@ public class PlayerHealth : MonoBehaviour {
 	float maxHealth = 100;
 	float curHealth;
 
+	public GameObject GameOverText, RestartButton;
+
 	void Start () {
+		GameOverText.SetActive (false);
+		RestartButton.SetActive (false);
 		healthBar.value = maxHealth;
 		curHealth = healthBar.value;
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
@@ -31,6 +35,11 @@ public class PlayerHealth : MonoBehaviour {
 			curHealth = healthBar.value;
 			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
+		}
+		if (curHealth <= 0) {
+			GameOverText.SetActive (true);
+			RestartButton.SetActive (true);
+			Time.timeScale = 0;
 		}
 	}
 	void Update () {

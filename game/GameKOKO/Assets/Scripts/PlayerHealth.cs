@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 	float maxHealth = 100;
 	float curHealth;
 
-	public GameObject GameOverText, RestartButton;
+	public GameObject GameOverText, RestartButton, meat;
 
 	void Start () {
 		GameOverText.SetActive (false);
@@ -36,11 +36,23 @@ public class PlayerHealth : MonoBehaviour {
 			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
 		}
+		if (col.gameObject.tag == "meat") {
+			healthBar.value -= 4.2f;
+			curHealth = healthBar.value;
+			col.gameObject.SetActive (false);
+			redFlash ();
+		}
+		if (col.gameObject.tag == "heart") {
+			healthBar.value += 4.2f;
+			curHealth = healthBar.value;
+			col.gameObject.SetActive (false);
+		}
 		if (curHealth <= 0) {
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
 			Time.timeScale = 0;
 		}
+
 	}
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";

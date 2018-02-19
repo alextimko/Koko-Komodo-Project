@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
 	private int tokencount;
 	public Text tokencountText;
 
+
 	void Start () 
 	{
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
@@ -133,22 +134,21 @@ public class Player : MonoBehaviour {
 		yield return 0;
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D collectible)
 	{
-		if (other.gameObject.CompareTag ("apple")) 
+		if (collectible.gameObject.CompareTag ("apple")) 
 		{
-			other.gameObject.SetActive (false);
+			collectible.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
 		}
-		if (other.gameObject.CompareTag ("coin")) 
+		if (collectible.gameObject.CompareTag ("coin")) 
 		{
-			other.gameObject.SetActive (false);
+			collectible.gameObject.SetActive (false);
 			tokencount = tokencount + 1;
 			SetTokenCountText ();
 
 		}
-			
 	}
 
 

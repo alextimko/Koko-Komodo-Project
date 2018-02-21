@@ -57,6 +57,7 @@ public class Player : MonoBehaviour {
 			facingRight = true;
 		}
 		if (Input.GetButtonDown ("Jump")) {
+			SoundManager.PlaySound ("jump");
 			if (grounded) {
 				rb2d.AddForce (Vector2.up * jumpPower);
 				canDoubleJump = true;
@@ -69,19 +70,23 @@ public class Player : MonoBehaviour {
 			}
 		}
 		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire) {
+			SoundManager.PlaySound ("fire");
 			fire ();
 			anim.SetBool ("attack", true);
 
 		}
 		if (Input.GetButtonUp ("Fire1")) {
+			SoundManager.PlaySound ("fire");
 			anim.SetBool ("attack", false);
 			anim.SetBool ("runandshoot", false);
 		}
 		if (Input.GetButtonDown ("Fire1") && GetComponent<Rigidbody2D> ().velocity.x > 0) {
+			SoundManager.PlaySound ("fire");
 			anim.SetBool ("attack", false);
 			anim.SetBool ("runandshoot", true);
 		}
 		if (Input.GetButtonDown ("Fire1") && GetComponent<Rigidbody2D> ().velocity.x < 0) {
+			SoundManager.PlaySound ("fire");
 			anim.SetBool ("attack", false);
 			anim.SetBool ("runandshoot", true);
 		}
@@ -139,12 +144,14 @@ public class Player : MonoBehaviour {
 	{
 		if (collectible.gameObject.CompareTag ("apple")) 
 		{
+			SoundManager.PlaySound ("bite");
 			collectible.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
 		}
 		if (collectible.gameObject.CompareTag ("coin")) 
 		{
+			SoundManager.PlaySound ("coin");
 			collectible.gameObject.SetActive (false);
 			tokencount = tokencount + 1;
 			SetTokenCountText ();

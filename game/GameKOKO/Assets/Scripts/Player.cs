@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 	public float maxSpeed = 3;
@@ -148,6 +149,11 @@ public class Player : MonoBehaviour {
 			tokencount = tokencount + 1;
 			SetTokenCountText ();
 
+		}
+		if (collectible.gameObject.CompareTag ("finishflag")) 
+		{
+			collectible.gameObject.SetActive (false);
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		}
 	}
 

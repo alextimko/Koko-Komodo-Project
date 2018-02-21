@@ -10,6 +10,7 @@ TagManager:
   - coin
   - meat
   - heart
+  - finishflag
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 455554bbceab6a34484460ba771a89b3
   - enabled: 1
+    path: Assets/Scenes/InbetweenCity.unity
+    guid: c8b0384ba49a38d42b9eb42159f9274f
+  - enabled: 1
     path: Assets/Scenes/CityIntro.unity
     guid: 20a121bf01bfc024d80e9838388614f7
   - enabled: 1
@@ -38,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 020a3fc9eb8dbfd4c8af271cb8806248
+  - enabled: 1
+    path: Assets/Scenes/SkyLevel.unity
+    guid: 10fc5b1f4b2af5344bf1664308da86d5

@@ -15,7 +15,9 @@ public class PlayerHealth : MonoBehaviour {
 	float curHealth;
 
 
-	public GameObject GameOverText, RestartButton, meat;
+	public GameObject GameOverText, RestartButton;
+
+	private GameObject meat;
 
 	void Start () {
 		GameOverText.SetActive (false);

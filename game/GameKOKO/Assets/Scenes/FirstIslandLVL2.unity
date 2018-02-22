@@ -357,6 +357,11 @@ Prefab:
       propertyPath: levelCompleted
       value: 
       objectReference: {fileID: 1308218832}
+    - target: {fileID: 114711092821310676, guid: 02d445b3c04df2c409176dbf395ac1d1,
+        type: 2}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1416357800}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02d445b3c04df2c409176dbf395ac1d1, type: 2}
   m_IsPrefabParent: 0

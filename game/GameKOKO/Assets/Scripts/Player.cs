@@ -33,6 +33,8 @@ public class Player : MonoBehaviour {
 	private int tokencount;
 	public Text tokencountText;
 
+	public GameObject game;
+
 
 	void Start () 
 	{
@@ -163,12 +165,13 @@ public class Player : MonoBehaviour {
 		}
 		if (collectible.gameObject.CompareTag ("finishflag")) 
 		{
+			DestroyObject (game);
+			SoundManager.PlaySound ("levelWin");
 			levelCompleted.SetActive (true);
 			collectible.gameObject.SetActive (false);
 			//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		}
 	}
-
 
 
 	void SetCountText()

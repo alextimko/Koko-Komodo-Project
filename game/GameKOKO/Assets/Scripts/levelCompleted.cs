@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class levelCompleted : MonoBehaviour {
 
 	public void Map () {
-		Application.LoadLevel (10);
+		Application.LoadLevel (11);
 	}
 	public void MainMenu () {
 		Application.LoadLevel (0);

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	public static AudioClip biteSound, gameOverSound, jumpSound, fireSound, healthSound, coinSound, meatSound;
+	public static AudioClip biteSound, gameOverSound, jumpSound, fireSound, 
+	healthSound, coinSound, meatSound, levelWinSound;
 	static AudioSource audioSrc;
 
 	void Start () {
@@ -15,6 +16,7 @@ public class SoundManager : MonoBehaviour {
 		fireSound = Resources.Load<AudioClip> ("fire");
 		healthSound = Resources.Load<AudioClip> ("health");
 		meatSound = Resources.Load<AudioClip> ("meat");
+		levelWinSound = Resources.Load<AudioClip> ("levelWin");
 
 		audioSrc = GetComponent<AudioSource> ();
 	}
@@ -41,6 +43,9 @@ public class SoundManager : MonoBehaviour {
 			break;
 		case "meat":
 			audioSrc.PlayOneShot (meatSound);
+			break;
+		case "levelWin":
+			audioSrc.PlayOneShot (levelWinSound);
 			break;
 
 		}

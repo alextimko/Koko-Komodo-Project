@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 	}
 	public void MainMenu() {
-		Application.LoadLevel (1); // "1" is the index number of Main menu
+		Application.LoadLevel (0); // "1" is the index number of Main menu
 	}
 	public void Quit () {
 		Application.Quit ();

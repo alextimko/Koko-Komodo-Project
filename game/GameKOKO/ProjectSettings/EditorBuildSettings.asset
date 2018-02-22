@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstIslandLVL4.unity
     guid: c540e8965862cb2419f605473d44dfb6
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 020a3fc9eb8dbfd4c8af271cb8806248

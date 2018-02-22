@@ -12,14 +12,26 @@ EditorBuildSettings:
     path: Assets/Scenes/CityIntro.unity
     guid: 20a121bf01bfc024d80e9838388614f7
   - enabled: 1
+    path: Assets/Scenes/Inbetween0.unity
+    guid: ce3ec6e001d12354299f25ee6f4cd663
+  - enabled: 1
     path: Assets/Scenes/TestingGround.unity
     guid: 7dc0985b785fa1247b74c0f2eeae58c4
+  - enabled: 1
+    path: Assets/Scenes/Inbetween1.unity
+    guid: 45c2934b516d40c4d98cb48d4af3926d
   - enabled: 1
     path: Assets/Scenes/FirstIslandLVL2.unity
     guid: d4e9990ddffcdfb499c47d138f7be86d
   - enabled: 1
+    path: Assets/Scenes/Inbetween2.unity
+    guid: e63afcacccc7df342be5372ee3838e68
+  - enabled: 1
     path: Assets/Scenes/FirstIslandLVL3.unity
     guid: 6ae5bb1746333f141afa959be078b5fd
+  - enabled: 1
+    path: Assets/Scenes/Inbetween3.unity
+    guid: 618176b789ebe1546873ce50ba56841e
   - enabled: 1
     path: Assets/Scenes/FirstIslandLVL4.unity
     guid: c540e8965862cb2419f605473d44dfb6

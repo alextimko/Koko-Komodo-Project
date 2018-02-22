@@ -65,6 +65,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (player.transform.position.y < -5) {
 			SoundManager.PlaySound ("gameOver");
+			Time.timeScale = 1f;
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
 		}

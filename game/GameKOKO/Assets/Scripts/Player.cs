@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
 
 	public GameObject levelCompleted, levelIncompleted;
 
+	public GameObject gameInstruction, gameInstructionText;
+
 	Vector2 fireBallPos;
 	public float fireRate = 0.5f;
 	float nextFire = 0.5f;
@@ -54,7 +56,10 @@ public class Player : MonoBehaviour {
 	{
 		anim.SetBool ("Grounded",grounded);
 		anim.SetFloat ("Speed", Mathf.Abs(rb2d.velocity.x));
-
+		if (rb2d.velocity.x > 0) {
+			gameInstruction.SetActive (false);
+			gameInstructionText.SetActive (false);
+		}
 		if (Input.GetAxis ("Horizontal") < -0.1f) {
 			transform.localScale = new Vector3 (-1, 1, 1);
 			facingRight = false;

@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour {
 	float curHealth;
 
 
-	public GameObject GameOverText, RestartButton;
+	public GameObject GameOverText, RestartButton, game;
 
 	private GameObject meat;
 
@@ -55,6 +55,7 @@ public class PlayerHealth : MonoBehaviour {
 			col.gameObject.SetActive (false);
 		}
 		if (curHealth <= 0) {
+			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
@@ -66,8 +67,9 @@ public class PlayerHealth : MonoBehaviour {
 		healthText.text = curHealth.ToString () + " %";
 
 		if (player.transform.position.y < -5) {
+			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
-			Time.timeScale = 1f;
+			Time.timeScale = 0f;
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
 		}

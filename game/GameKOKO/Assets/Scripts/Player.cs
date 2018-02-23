@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 
 	public GameObject FireBallLeft, FireBallRight;
 
-	public GameObject levelCompleted;
+	public GameObject levelCompleted, levelIncompleted;
 
 	Vector2 fireBallPos;
 	public float fireRate = 0.5f;
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour {
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 		anim = gameObject.GetComponent<Animator> ();
 		levelCompleted.SetActive (false);
+		levelIncompleted.SetActive (false);
 		count = 0;
 		tokencount = 0;
 		SetCountText ();
@@ -165,11 +166,18 @@ public class Player : MonoBehaviour {
 		}
 		if (collectible.gameObject.CompareTag ("finishflag")) 
 		{
-			DestroyObject (game);
-			SoundManager.PlaySound ("levelWin");
-			levelCompleted.SetActive (true);
-			collectible.gameObject.SetActive (false);
-			//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			if (tokencount >= 1) {
+				DestroyObject (game);
+				SoundManager.PlaySound ("levelWin");
+				levelCompleted.SetActive (true);
+				collectible.gameObject.SetActive (false);
+			}
+			if (tokencount == 0) {
+				DestroyObject (game);
+				SoundManager.PlaySound ("gameOver");
+				levelIncompleted.SetActive (true);
+				collectible.gameObject.SetActive (false);
+			}
 		}
 	}
 

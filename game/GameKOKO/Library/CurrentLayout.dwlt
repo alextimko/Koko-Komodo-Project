@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 421}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 213
+  controlID: 6449
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 214
+  controlID: 6363
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,14 +368,14 @@ MonoBehaviour:
     height: 321
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1405.9177605461468
+  lastFramingTime: 2545.4831556391787
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 267.67767, y: 82.1097, z: -7.0873594}
+    m_Target: {x: -31.119392, y: 9.425914, z: -2.9030244}
     speed: 2
-    m_Value: {x: 267.67767, y: 82.1097, z: -7.0873594}
+    m_Value: {x: -31.119392, y: 9.425914, z: -2.9030244}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -403,9 +403,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 706.9698
+    m_Target: 291.95096
     speed: 2
-    m_Value: 706.9698
+    m_Value: 291.95096
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -537,7 +537,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: 20c0fdff6ecbfdffded8fdff22e7fdff6817feff5e1efeffb42bfeff142cfeff223afeff4a3afeff3861feff9862feffd270feff7e71feff5a46ffff24e4ffff22e5ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -556,7 +556,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - StartMenu
+  - TestingGround
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -599,18 +599,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Resources
+    - Assets/prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources
+  - Assets/prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Koko game\Koko-Komodo-Project\game\GameKOKO
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4280000
-    m_LastClickedID: 10484
+    m_SelectedIDs: a2290000
+    m_LastClickedID: 10658
     m_ExpandedIDs: 00000000822700007028000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 643}
+    m_ScrollPosition: {x: 0, y: 786.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &18

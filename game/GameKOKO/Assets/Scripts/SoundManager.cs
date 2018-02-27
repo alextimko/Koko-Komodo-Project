@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour {
+
+	public AudioMixer audioMixer;
 
 	public static AudioClip biteSound, gameOverSound, jumpSound, fireSound, 
 	healthSound, coinSound, meatSound, levelWinSound;
@@ -49,6 +51,10 @@ public class SoundManager : MonoBehaviour {
 			break;
 
 		}
+	}
+	public void SetVolume(float volume) {
+		Debug.Log (volume);
+		audioMixer.SetFloat ("volume", volume);
 	}
 }	
 

@@ -107,7 +107,7 @@ public class Player : MonoBehaviour {
 		Vector3 easeVelocity = rb2d.velocity;
 		easeVelocity.y = rb2d.velocity.y;
 		easeVelocity.z = 0.0f;;
-		easeVelocity.x *= 0.75f;
+		easeVelocity.x *= 0.60f;
 		float h = Input.GetAxis ("Horizontal");
 
 		//Fake friction *** easing the x speed of the player

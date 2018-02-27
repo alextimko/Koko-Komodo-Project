@@ -29,28 +29,28 @@ public class PlayerHealth : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D col) {
 		if (col.gameObject.tag == "Saw") {
 			SoundManager.PlaySound ("meat");
-			healthBar.value -= 4.5f;
+			healthBar.value -= 5f;
 			curHealth = healthBar.value;
 			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
 		}
 		if (col.gameObject.tag == "Spike") {
 			SoundManager.PlaySound ("meat");
-			healthBar.value -= 4.2f;
+			healthBar.value -= 10f;
 			curHealth = healthBar.value;
 			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
 			redFlash ();
 		}
 		if (col.gameObject.tag == "meat") {
 			SoundManager.PlaySound ("meat");
-			healthBar.value -= 4.2f;
+			healthBar.value -= 10f;
 			curHealth = healthBar.value;
 			col.gameObject.SetActive (false);
 			redFlash ();
 		}
 		if (col.gameObject.tag == "heart") {
 			SoundManager.PlaySound ("health");
-			healthBar.value += 4.2f;
+			healthBar.value += 20f;
 			curHealth = healthBar.value;
 			col.gameObject.SetActive (false);
 		}

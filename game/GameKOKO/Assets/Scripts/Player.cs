@@ -69,7 +69,7 @@ public class Player : MonoBehaviour {
 		if (Input.GetButtonDown ("Jump")) {
 			SoundManager.PlaySound ("jump");
 			if (grounded) {
-				rb2d.AddForce (Vector2.up * jumpPower);
+				rb2d.AddForce (Vector2.up * (jumpPower + 20f));
 				canDoubleJump = true;
 			} else {
 				if (canDoubleJump) {
@@ -156,7 +156,7 @@ public class Player : MonoBehaviour {
 		{
 			SoundManager.PlaySound ("bite");
 			collectible.gameObject.SetActive (false);
-			count = count + 1;
+			count = count + 100;
 			SetCountText ();
 		}
 		if (collectible.gameObject.CompareTag ("coin")) 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour {
 
-	public float velX = 5f;
+	public float velX = 5f; //Velocity for the fire ball
 	public float velY = 0f;
 
 	Rigidbody2D rb2d;
@@ -17,7 +17,7 @@ public class FireBall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb2d.velocity = new Vector2 (velX, velY);
-		Destroy (gameObject, 3f);
+		rb2d.velocity = new Vector2 (velX, velY);	//Fire ball move in X dỉrection (because velY = 0f)
+		Destroy (gameObject, 3f);  //Destroy fire ball after 3 seconds
 	}
 }

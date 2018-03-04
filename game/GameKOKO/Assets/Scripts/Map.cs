@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Map : MonoBehaviour {
 
-	public GameObject gameMap;
+	public GameObject gameMap;		
 
 	public void CityIntro () {
-		Application.LoadLevel (1);
+		Application.LoadLevel ("InbetweenCity");
 	}
 	public void SkyLevel () {
-		Application.LoadLevel (12);
+		Application.LoadLevel ("SkyLevel");
 	}
 	public void Back () {
-		Application.LoadLevel (0);
+		Application.LoadLevel ("StartMenu");
 	}
 }
+///All the functions above are to load the level base on the name of the scenes

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PlayerHealth : MonoBehaviour {
 	[SerializeField]
-	Slider healthBar;
+	Slider healthBar;	//get the health bar from unity
 	[SerializeField]
-	Text healthText;
+	Text healthText;	//get the health text from unity
 
 	private Player player;
 
@@ -26,13 +27,13 @@ public class PlayerHealth : MonoBehaviour {
 		curHealth = healthBar.value;
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
 	}
-	void OnTriggerStay2D (Collider2D col) {
-		if (col.gameObject.tag == "Saw") {
+	void OnTriggerStay2D (Collider2D col) {	//When the character collides with the "tag" objects
+		if (col.gameObject.tag == "Saw") {	
 			SoundManager.PlaySound ("meat");
-			healthBar.value -= 5f;
-			curHealth = healthBar.value;
-			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
-			redFlash ();
+			healthBar.value -= 5f;	//minus health from health bar
+			curHealth = healthBar.value;	
+			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));	//activate knock back
+			redFlash ();	//red flash animation when character lose health
 		}
 		if (col.gameObject.tag == "Spike") {
 			SoundManager.PlaySound ("meat");
@@ -54,7 +55,7 @@ public class PlayerHealth : MonoBehaviour {
 			curHealth = healthBar.value;
 			col.gameObject.SetActive (false);
 		}
-		if (curHealth <= 0) {
+		if (curHealth <= 0) {	//current health of the character equals to 0 so the game is over
 			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
 			GameOverText.SetActive (true);
@@ -66,7 +67,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";
 
-		if (player.transform.position.y < -5) {
+		if (player.transform.position.y < -5) {	//when the character is falling off the ground, game is over
 			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
 			Time.timeScale = 0f;
@@ -75,6 +76,6 @@ public class PlayerHealth : MonoBehaviour {
 		}
 	}
 	void redFlash () {
-		gameObject.GetComponent<Animation> ().Play ("Red_Flash");
+		gameObject.GetComponent<Animation> ().Play ("Red_Flash");	//activate the animation
 	}
 }

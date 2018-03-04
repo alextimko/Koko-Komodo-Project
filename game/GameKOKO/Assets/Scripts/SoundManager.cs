@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour {
 
-	public AudioMixer audioMixer;
+	public AudioMixer audioMixer;	//declare variable
 
 	public static AudioClip biteSound, gameOverSound, jumpSound, fireSound, 
-	healthSound, coinSound, meatSound, levelWinSound;
+	healthSound, coinSound, meatSound, levelWinSound;	//declare variables
 	static AudioSource audioSrc;
 
 	void Start () {
-		biteSound = Resources.Load<AudioClip> ("bite");
+		biteSound = Resources.Load<AudioClip> ("bite");	//get the sound base on name in unity
 		gameOverSound = Resources.Load<AudioClip> ("gameOver");
 		jumpSound = Resources.Load<AudioClip> ("jump");
 		coinSound = Resources.Load<AudioClip> ("coin");
@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public static void PlaySound (string clip) {
-		switch (clip) {
+		switch (clip) {	//these sounds are played depend on what case we are having
 		case "bite":
 			audioSrc.PlayOneShot (biteSound);
 			break;

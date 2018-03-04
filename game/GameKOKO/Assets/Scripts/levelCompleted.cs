@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class levelCompleted : MonoBehaviour {
 
-	public void Map () {
-		Application.LoadLevel (11);
+	public void Map () { 				///***Application.LoadLevel -- load level base on "Name of the scene"
+		Application.LoadLevel ("Map"); 
 	}
 	public void MainMenu () {
-		Application.LoadLevel (0);
+		Application.LoadLevel ("StartMenu");
 	}
 	public void NextLevel () {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);

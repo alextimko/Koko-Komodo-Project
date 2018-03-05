@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour {
 	float maxHealth = 100;
 	float curHealth;
 
+	Animator anim;
 
 	public GameObject GameOverText, RestartButton, game;
 
@@ -26,40 +27,46 @@ public class PlayerHealth : MonoBehaviour {
 		healthBar.value = maxHealth;
 		curHealth = healthBar.value;
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
+
 	}
 	void OnTriggerStay2D (Collider2D col) {	//When the character collides with the "tag" objects
-		if (col.gameObject.tag == "Saw") {	
-			SoundManager.PlaySound ("meat");
-			healthBar.value -= 5f;	//minus health from health bar
-			curHealth = healthBar.value;	
-			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));	//activate knock back
-			redFlash ();	//red flash animation when character lose health
+		if (curHealth > 0) {
+			if (col.gameObject.tag == "Saw") {	
+				SoundManager.PlaySound ("meat");
+				healthBar.value -= 5f;	//minus health from health bar
+				curHealth = healthBar.value;	
+				StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));	//activate knock back
+				redFlash ();	//red flash animation when character lose health
+			}
+			if (col.gameObject.tag == "Spike") {
+				SoundManager.PlaySound ("meat");
+				healthBar.value -= 10f;
+				curHealth = healthBar.value;
+				StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
+				redFlash ();
+			}
+			if (col.gameObject.tag == "meat") {
+				SoundManager.PlaySound ("meat");
+				healthBar.value -= 10f;
+				curHealth = healthBar.value;
+				col.gameObject.SetActive (false);
+				redFlash ();
+			}
+			if (col.gameObject.tag == "heart") {
+				SoundManager.PlaySound ("health");
+				healthBar.value += 20f;
+				curHealth = healthBar.value;
+				col.gameObject.SetActive (false);
+			}
 		}
-		if (col.gameObject.tag == "Spike") {
-			SoundManager.PlaySound ("meat");
-			healthBar.value -= 10f;
-			curHealth = healthBar.value;
-			StartCoroutine (player.Knockback (0.02f, 40, player.transform.position));
-			redFlash ();
-		}
-		if (col.gameObject.tag == "meat") {
-			SoundManager.PlaySound ("meat");
-			healthBar.value -= 10f;
-			curHealth = healthBar.value;
-			col.gameObject.SetActive (false);
-			redFlash ();
-		}
-		if (col.gameObject.tag == "heart") {
-			SoundManager.PlaySound ("health");
-			healthBar.value += 20f;
-			curHealth = healthBar.value;
-			col.gameObject.SetActive (false);
-		}
-		if (curHealth <= 0) {	//current health of the character equals to 0 so the game is over
+		else if (curHealth <= 0 ) {	//current health of the character equals to 0 so the game is over
 			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
+			Destroy (player);
+			Time.timeScale = 0f;
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
+
 		}
 			
 
@@ -67,10 +74,10 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";
 
-		if (player.transform.position.y < -5) {	//when the character is falling off the ground, game is over
+		if (player.transform.position.y < -2) {	//when the character is falling off the ground, game is over
 			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
-			Time.timeScale = 0f;
+			Time.timeScale = 0.0f;
 			GameOverText.SetActive (true);
 			RestartButton.SetActive (true);
 		}

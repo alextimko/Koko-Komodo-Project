@@ -154,10 +154,12 @@ public class Player : MonoBehaviour {
 	{
 		if (collectible.gameObject.CompareTag ("apple")) //collide with object following the name tag
 		{
-			SoundManager.PlaySound ("bite");
-			collectible.gameObject.SetActive (false);
-			count = count + 100;	//add point
-			SetCountText ();
+			
+				SoundManager.PlaySound ("bite");
+				collectible.gameObject.SetActive (false);
+				count = count + 100;	//add point
+				SetCountText ();
+
 		}
 		if (collectible.gameObject.CompareTag ("coin")) 
 		{
@@ -187,7 +189,7 @@ public class Player : MonoBehaviour {
 
 	void SetCountText()
 	{
-		countText.text = "Fruit: " + count.ToString ();	//show the points on screen
+		countText.text = "Score: " + count.ToString ();	//show the points on screen
 	}
 	void SetTokenCountText()
 	{

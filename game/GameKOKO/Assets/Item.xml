@@ -1,2 +1,18 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-
+﻿<ItemCollection>
+	<Item>
+		<Item name="heart">
+		<lifeGain>20</lifeGain>
+		</Item>
+		<Item name="fruit">
+		<scoreGain>100</scoreGain>
+		</Item>
+		<Item name="meat">
+		<damage>10</damage>
+		</Item>
+		<Item name="saw">
+		<damage>5</damage>
+		</Item>
+		<Item name="spike">
+		<damage>10</damage>
+		</Item>
+ 	</Item>

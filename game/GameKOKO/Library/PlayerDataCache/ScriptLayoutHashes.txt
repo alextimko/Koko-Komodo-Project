@@ -136,6 +136,7 @@ ba726e863b92745147f4e717f37de405 Assembly-CSharp.dll:.Player
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.levelCompleted
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChangeScene
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RestartButton
 2f332606b836e51d93c2aa652d317cd5 Assembly-CSharp.dll:.SoundManager
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -152,6 +153,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+ef2acbfaf28bab350aff8c3152b9d866 Assembly-CSharp.dll:.Item
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -167,4 +169,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 06e6379599a177478ce28fdaecfe730c Assembly-CSharp.dll:.SkyLevel
 925287bb033b16ef8f307268782f2141 Assembly-CSharp.dll:.PauseMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChangeScene

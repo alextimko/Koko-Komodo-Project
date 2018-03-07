@@ -199,3 +199,5 @@ E:\Koko game\Koko-Komodo-Project\game\GameKOKO\Temp\bin\Debug\UnityEditor.iOS.Ex
 E:\Koko game\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 E:\Koko game\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.dll
 E:\Koko game\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.pdb
+E:\Koko game\Koko-Komodo-Project\game\GameKOKO\Temp\bin\Debug\Mono.Data.Sqlite.dll
+E:\Koko game\Koko-Komodo-Project\game\GameKOKO\Temp\bin\Debug\System.Data.dll

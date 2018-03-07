@@ -47,3 +47,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkyLevel.unity
     guid: 10fc5b1f4b2af5344bf1664308da86d5
+  - enabled: 1
+    path: Assets/Scenes/Scene.unity
+    guid: 60e8d2b65a5bc4b4e84610294eeee21d

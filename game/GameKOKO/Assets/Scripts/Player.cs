@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator anim;
 
+
 	public GameObject FireBallLeft, FireBallRight;  //Find and get all informations of this game object in unity
 
 	public GameObject levelCompleted, levelIncompleted;	
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour {
 	float nextFire = 0.5f;
 	// Use this for initialization
 
-	private int count; //fruit collecting count
+	public static int count = 0; //fruit collecting count
 	public Text countText;
 	private int tokencount;
 	public Text tokencountText;
@@ -149,6 +150,7 @@ public class Player : MonoBehaviour {
 
 		yield return 0;
 	}
+
 
 	void OnTriggerEnter2D(Collider2D collectible)
 	{

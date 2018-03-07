@@ -114,7 +114,8 @@ public class HighScoreManager : MonoBehaviour {
 
         if (enterName.text != string.Empty) //Makes sure that we have some text to enter
         {
-            int score = UnityEngine.Random.Range(1, 500); //Generates a random score
+
+			int score = Player.count; //Generates a random score
 
             InsertScore(enterName.text, score); //Inserts the score in the database
 

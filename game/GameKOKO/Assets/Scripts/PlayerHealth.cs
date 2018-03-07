@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour {
 	Text healthText;	//get the health text from unity
 
 	private Player player;
+	private float timer = 3.6f;
 
 	float maxHealth = 100;
 	float curHealth;
@@ -65,7 +66,10 @@ public class PlayerHealth : MonoBehaviour {
 			Destroy (player);
 			Time.timeScale = 0f;
 			GameOverText.SetActive (true);
-			RestartButton.SetActive (true);
+			timer -= Time.deltaTime;
+			if (timer <= 0) {
+				Application.LoadLevel ("Scene");
+			}
 
 		}
 			
@@ -74,12 +78,16 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		healthText.text = curHealth.ToString () + " %";
 
-		if (player.transform.position.y < -2) {	//when the character is falling off the ground, game is over
+		if (player.transform.position.y < -5) {	//when the character is falling off the ground, game is over
 			DestroyObject (game);
 			SoundManager.PlaySound ("gameOver");
-			Time.timeScale = 0.0f;
+			Time.timeScale = 0f;
 			GameOverText.SetActive (true);
-			RestartButton.SetActive (true);
+			timer -= Time.deltaTime + 0.05f;
+			if (timer <= 0) {
+				Application.LoadLevel ("Scene");
+			}
+				
 		}
 	}
 	void redFlash () {

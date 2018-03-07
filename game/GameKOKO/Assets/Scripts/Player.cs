@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
 		anim = gameObject.GetComponent<Animator> ();
 		levelCompleted.SetActive (false);
 		levelIncompleted.SetActive (false);
-		count = 0;
+		count = PlayerPrefs.GetInt("currentScore");
 		tokencount = 0;
 		SetCountText ();
 		SetTokenCountText ();
@@ -160,6 +160,7 @@ public class Player : MonoBehaviour {
 				SoundManager.PlaySound ("bite");
 				collectible.gameObject.SetActive (false);
 				count = count + 100;	//add point
+				PlayerPrefs.SetInt("currentScore",count);//continue to the next level using the score collected from the previous level
 				SetCountText ();
 
 		}

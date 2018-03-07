@@ -10,11 +10,14 @@ public class levelCompleted : MonoBehaviour {
 	}
 	public void MainMenu () {
 		Application.LoadLevel ("StartMenu");
+		PlayerPrefs.SetInt("currentScore",0);
 	}
 	public void NextLevel () {
+		
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 	public void Restart () {
 		Application.LoadLevel (Application.loadedLevel);
+
 	}
 }

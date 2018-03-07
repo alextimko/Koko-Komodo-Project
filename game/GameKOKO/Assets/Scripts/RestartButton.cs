@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RestartButton : MonoBehaviour {
 
 	public void RestartScene () {
-		Application.LoadLevel (Application.loadedLevel);	//load the current level again
+		Application.LoadLevel (Application.loadedLevel);//load the current level again
+		PlayerPrefs.SetInt("currentScore",0);
 	}
 }

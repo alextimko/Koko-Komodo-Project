@@ -177,6 +177,7 @@ public class Player : MonoBehaviour {
 				DestroyObject (game);
 				SoundManager.PlaySound ("levelWin");
 				levelCompleted.SetActive (true);
+				speed = 0;
 				collectible.gameObject.SetActive (false);
 			}
 			if (tokencount == 0) {	//level incompleted

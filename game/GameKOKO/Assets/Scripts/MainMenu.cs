@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour {
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1); ///Load next scene
 	}
+	public void New () {
+		Application.LoadLevel ("StoryIntro");
+	}
 
 	public void Map () {
 		Application.LoadLevel ("Map");

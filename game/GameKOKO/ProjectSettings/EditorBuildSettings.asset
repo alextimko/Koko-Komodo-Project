@@ -50,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene.unity
     guid: 60e8d2b65a5bc4b4e84610294eeee21d
+  - enabled: 1
+    path: Assets/Scenes/StoryIntro.unity
+    guid: 097538f69c2903d408e6a7f5a8b25efa

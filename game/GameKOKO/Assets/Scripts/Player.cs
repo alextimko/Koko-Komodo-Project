@@ -145,7 +145,7 @@ public class Player : MonoBehaviour {
 		while (knockDur > timer) {
 			timer += Time.deltaTime;
 			rb2d.velocity = new Vector2 (0, 0);
-			rb2d.AddForce (new Vector3 (knockbackDir.x * -40, 80, transform.position.z));
+			rb2d.AddForce (new Vector3 (knockbackDir.x * -20, 40, transform.position.z));
 		}
 
 		yield return 0;

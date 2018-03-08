@@ -273,3 +273,5 @@ C:\Users\zed\Documents\GameProject\Koko-Komodo-Project\Koko-Komodo-Project\game\
 C:\Users\zed\Documents\GameProject\Koko-Komodo-Project\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\zed\Documents\GameProject\Koko-Komodo-Project\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.dll
 C:\Users\zed\Documents\GameProject\Koko-Komodo-Project\Koko-Komodo-Project\game\GameKOKO\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Alex\Documents\Metropolia\Games\Koko-Komodo-Project\Koko-Komodo-Project\game\GameKOKO\Temp\bin\Debug\Mono.Data.Sqlite.dll
+C:\Users\Alex\Documents\Metropolia\Games\Koko-Komodo-Project\Koko-Komodo-Project\game\GameKOKO\Temp\bin\Debug\System.Data.dll

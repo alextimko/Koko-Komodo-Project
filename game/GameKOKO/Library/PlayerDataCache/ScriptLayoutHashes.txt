@@ -5,7 +5,7 @@ Assets/Scenes/StartMenu.unity
 Assets/Scenes/InbetweenCity.unity
 Assets/Scenes/CityIntro.unity
 Assets/Scenes/Inbetween0.unity
-Assets/Scenes/TestingGround.unity
+Assets/Scenes/FirstIslandLVL1.unity
 Assets/Scenes/Inbetween1.unity
 Assets/Scenes/FirstIslandLVL2.unity
 Assets/Scenes/Inbetween2.unity
@@ -14,6 +14,7 @@ Assets/Scenes/Inbetween3.unity
 Assets/Scenes/FirstIslandLVL4.unity
 Assets/Scenes/Map.unity
 Assets/Scenes/SkyLevel.unity
+Assets/Scenes/Scene.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -129,6 +130,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+74b32fc626f1154297b5adce25bc8cce Assembly-CSharp.dll:.HighScoreScript
 e9282bfa5d509c98b6436d9a998292f4 Assembly-CSharp.dll:.Map
 ba726e863b92745147f4e717f37de405 Assembly-CSharp.dll:.Player
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Saw
@@ -167,5 +169,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 06e6379599a177478ce28fdaecfe730c Assembly-CSharp.dll:.SkyLevel
+6645a88290b9abfa21026ffcfaeff9d9 Assembly-CSharp.dll:.HighScoreManager
 925287bb033b16ef8f307268782f2141 Assembly-CSharp.dll:.PauseMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu

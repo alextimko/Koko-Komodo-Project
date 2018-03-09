@@ -21,4 +21,8 @@ public class levelCompleted : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 
 	}
+	public void ShowHighScore () {
+
+		SceneManager.LoadScene ("Scene");
+	}
 }

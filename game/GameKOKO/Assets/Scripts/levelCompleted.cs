@@ -11,6 +11,7 @@ public class levelCompleted : MonoBehaviour {
 	public void MainMenu () {
 		Application.LoadLevel ("StartMenu");
 		PlayerPrefs.SetInt("currentScore",0);
+		PlayerPrefs.SetInt ("currentToken",0);
 	}
 	public void NextLevel () {
 		

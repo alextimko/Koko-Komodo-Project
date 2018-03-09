@@ -46,7 +46,7 @@ public class Player : MonoBehaviour {
 		levelCompleted.SetActive (false);
 		levelIncompleted.SetActive (false);
 		count = PlayerPrefs.GetInt("currentScore");
-		tokencount = 0;
+		tokencount = PlayerPrefs.GetInt("currentToken");
 		SetCountText ();
 		SetTokenCountText ();
 
@@ -169,6 +169,7 @@ public class Player : MonoBehaviour {
 			SoundManager.PlaySound ("coin");
 			collectible.gameObject.SetActive (false);
 			tokencount = tokencount + 1;	//add token
+			PlayerPrefs.SetInt("currentToken",tokencount);
 			SetTokenCountText ();
 
 		}

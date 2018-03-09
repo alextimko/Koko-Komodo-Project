@@ -7,7 +7,11 @@ This project was assigned to us during our first year studies in Metropolia Univ
 
 The first step is to download Unity from https://goo.gl/1rrETC. This is a personal and free version of Unity. One can also download the plus or pro versions from https://unity3d.com/unity. During the download process one can decide to use Visual Studio or MonoDevelop. Visual Studio is heavier software compared to MonoDevelop, however they both support C# programming language. This project uses MonoDevelop.
 
-In order to play the game one will need unity to build the game using unity build settings. This link ( https://ibb.co/bPBGOSto) shows how to build the game. This will create application (.exe file) in our local computer. Now, open it and play! Enjoy!
+In order to play the game one will need unity to build the game using unity build settings. This link ( https://ibb.co/bPBGOSto) shows how to build the game. This will create application (.exe file) in our local computer. Now, open it and play! 
+
+# How do you play the game?
+
+To move character around use left and right arow keys. The alternate optioon are A for left and D for right. Use the space key for a single jump and hit the space key twice for double jump. The full instruction will be displayed when the game begins.
 
 # Where can you get help and how can you help?
 

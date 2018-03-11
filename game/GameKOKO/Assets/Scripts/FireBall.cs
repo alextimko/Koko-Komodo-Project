@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBall : MonoBehaviour {
-
+	/// <summary>
+	/// Velocity of the fire ball
+	/// </summary>
 	public float velX = 5f; //Velocity for the fire ball
 	public float velY = 0f;
 
@@ -16,6 +18,9 @@ public class FireBall : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	/// <summary>
+	/// Fire ball moves in x direction only because the vely = 0f
+	/// </summary>
 	void Update () {
 		rb2d.velocity = new Vector2 (velX, velY);	//Fire ball move in X dỉrection (because velY = 0f)
 		Destroy (gameObject, 3f);  //Destroy fire ball after 3 seconds

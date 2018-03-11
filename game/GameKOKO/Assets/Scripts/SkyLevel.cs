@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SkyLevel : MonoBehaviour {
-
+	/// <summary>
+	/// game object created
+	/// </summary>
 	public GameObject Levels;
-
+	/// <summary>
+	///loads scenes in between.
+	/// </summary>
 	public void Level1 () {
 		Application.LoadLevel ("Inbetween0");
 	}
@@ -21,6 +25,9 @@ public class SkyLevel : MonoBehaviour {
 	public void Level4 () {
 		Application.LoadLevel ("Inbetween3");
 	}
+	/// <summary>
+	/// Back to the map scene.
+	/// </summary>
 	public void Back(){
 		Application.LoadLevel ("Map");
 	}

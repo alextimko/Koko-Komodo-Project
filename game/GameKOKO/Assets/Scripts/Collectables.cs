@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectables : MonoBehaviour {
-
+	/// <summary>
+	/// Rotates the saw following Y direction
+	/// </summary>
 	// Update is called once per frame
 	void Update () 
 	{

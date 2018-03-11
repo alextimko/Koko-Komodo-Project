@@ -5,8 +5,14 @@ using UnityEngine.UI;
 using System;
 
 public class PlayerHealth : MonoBehaviour {
+	/// <summary>
+	/// gets the health bar from unity.
+	/// </summary>
 	[SerializeField]
 	Slider healthBar;	//get the health bar from unity
+	/// <summary>
+	/// gets the health text.
+	/// </summary>
 	[SerializeField]
 	Text healthText;	//get the health text from unity
 
@@ -28,8 +34,12 @@ public class PlayerHealth : MonoBehaviour {
 		healthBar.value = maxHealth;
 		curHealth = healthBar.value;
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
-
+		 
 	}
+	/// <summary>
+	/// Things that happens when the character collides with the "tag" objects
+	/// </summary>
+	/// <param name="col">Col.</param>
 	void OnTriggerStay2D (Collider2D col) {	//When the character collides with the "tag" objects
 		if (curHealth > 0) {
 			if (col.gameObject.tag == "Saw") {	
@@ -90,6 +100,9 @@ public class PlayerHealth : MonoBehaviour {
 				
 		}
 	}
+	/// <summary>
+	/// activates the animation
+	/// </summary>
 	void redFlash () {
 		gameObject.GetComponent<Animation> ().Play ("Red_Flash");	//activate the animation
 	}

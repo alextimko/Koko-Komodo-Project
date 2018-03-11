@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Map : MonoBehaviour {
-
+	/// <summary>
+	/// All the methods load a scene based on the name of scene
+	/// </summary>
 	public GameObject gameMap;		
 
 	public void CityIntro () {

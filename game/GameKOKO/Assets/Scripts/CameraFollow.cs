@@ -1,13 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Camera follow class.
+/// </summary>
 public class CameraFollow : MonoBehaviour {
-
+	/// <summary>
+	/// The velocity a player.
+	/// </summary>
 	private Vector2 velocity;
+	/// <summary>
+	/// position of the player in y direction
+	/// </summary>
 	public float smoothTimeY;
-	public float smoothTimeX;
 
+	/// <summary>
+	/// position of the player in y direction
+	/// </summary>
+	public float smoothTimeX;
+	/// <summary>
+	/// The player game object created.
+	/// </summary>
 	public GameObject player;
 
 	public bool bounds;
@@ -17,6 +30,9 @@ public class CameraFollow : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 	}
+	/// <summary>
+	/// camera following and add booundary for the camera
+	/// </summary>
 	void FixedUpdate (){
 		//Camera Following
 		float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x,smoothTimeX);

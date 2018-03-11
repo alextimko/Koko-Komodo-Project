@@ -5,32 +5,54 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
+	/// <summary>
+	/// The max speed of speed of the character is 3.
+	/// </summary>
 	public float maxSpeed = 3;	//Set the max Speed of character is 3
 	public float speed = 10f;
 	public float jumpPower = 15f;
-
+	/// <summary>
+	/// check the character is facing right or not.
+	/// </summary>
 	public bool facingRight;	//Check the character is facing right or not
+	/// <summary>
+	/// Check the character is on the ground or not
+	/// </summary>
 	public bool grounded;	//Check the character is grounded or not
+	/// <summary>
+	/// Check if the character can use double jump or not
+	/// </summary>
 	public bool canDoubleJump;	//Check the character can use double jump or not
-
+	/// <summary>
+	/// The current health.
+	/// </summary>
 	public int curHealth;		//Current health
+	/// <summary>
+	/// The max health is set to 100.
+	/// </summary>
 	public int maxHealth = 100; 	//Max health
 
 	private Rigidbody2D rb2d;
 	private Animator anim;
-
+	/// <summary>
+	/// Find and get all information of this game object in unity
+	/// </summary>
 
 	public GameObject FireBallLeft, FireBallRight;  //Find and get all informations of this game object in unity
 
 	public GameObject levelCompleted, levelIncompleted;	
 
 	public GameObject gameInstruction, gameInstructionText;
-
+	/// <summary>
+	/// Get the fire ball position
+	/// </summary>
 	Vector2 fireBallPos;		//get the fire ball position
 	public float fireRate = 0.5f;
 	float nextFire = 0.5f;
 	// Use this for initialization
-
+	/// <summary>
+	/// Fruit caollectiong count which is equal to score
+	/// </summary>
 	public static int count = 0; //fruit collecting count
 	public Text countText;
 	private int tokencount;
@@ -53,6 +75,9 @@ public class Player : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	/// <summary>
+	/// Update player status
+	/// </summary>
 	void Update () 
 	{
 		anim.SetBool ("Grounded",grounded);
@@ -102,7 +127,9 @@ public class Player : MonoBehaviour {
 			anim.SetBool ("runandshoot", true);
 		}
 	}
-
+	/// <summary>
+	/// Create invisible friction to stop the character immediately when it stops moving
+	/// </summary>
 	void FixedUpdate () 
 	{
 		Vector3 easeVelocity = rb2d.velocity; //create invisible friction to stop the character immediately when he stop moving
@@ -128,6 +155,9 @@ public class Player : MonoBehaviour {
 		}
 	
 	}
+	/// <summary>
+	/// Fire ball method 
+	/// </summary>
 	void fire () {	//function for fire ball
 		fireBallPos = transform.position;
 		if (facingRight) {
@@ -138,6 +168,12 @@ public class Player : MonoBehaviour {
 			Instantiate (FireBallLeft, fireBallPos, Quaternion.identity);
 		}
 	}
+	/// <summary>
+	/// Knockback knock back duration, power and direction
+	/// </summary>
+	/// <param name="knockDur">Knock dur.</param>
+	/// <param name="knockbackPwr">Knockback pwr.</param>
+	/// <param name="knockbackDir">Knockback dir.</param>
 
 	public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir) {//knock back duration, power amd direction
 		float timer = 0;
@@ -190,12 +226,17 @@ public class Player : MonoBehaviour {
 			}
 		}
 	}
-
+	/// <summary>
+	/// show score progress on the screen during the game
+	/// </summary>
 
 	void SetCountText()
 	{
 		countText.text = "Score: " + count.ToString ();	//show the points on screen
 	}
+	/// <summary>
+	/// Shows token collected on the screen during the game
+	/// </summary>
 	void SetTokenCountText()
 	{
 		tokencountText.text = "Token: " + tokencount.ToString ();	//show the token on screen

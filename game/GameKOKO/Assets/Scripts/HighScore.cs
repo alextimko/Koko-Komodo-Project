@@ -5,13 +5,23 @@ using System.Text;
 
 class HighScore : IComparable<HighScore>
 {
+	/// <summary>
+	/// Gets or sets the score.
+	/// </summary>
+	/// <value>The score.</value>
     public int Score { get; set; }
     public string Name { get; set; }
 
     public DateTime Date { get; set; }
 
     public int ID { get; set; }
-
+	/// <summary>
+	/// High score constractor
+	/// </summary>
+	/// <param name="id">Identifier.</param>
+	/// <param name="score">Score.</param>
+	/// <param name="name">Name.</param>
+	/// <param name="date">Date.</param>
     public HighScore(int id, int score, string name, DateTime date)
     {
         this.Score = score;
@@ -19,7 +29,11 @@ class HighScore : IComparable<HighScore>
         this.ID = id;
         this.Date = date;
     }
-		
+		/// <summary>
+		/// Compares the score.
+		/// </summary>
+		/// <returns>The to.</returns>
+		/// <param name="other">Other.</param>
     public int CompareTo(HighScore other)
     {
         //first > second return -1

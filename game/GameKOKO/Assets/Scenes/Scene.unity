@@ -1315,6 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5159e5e2b2bfb94182ca0396252f7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnteName: {fileID: 1107666915}
   scorePrefab: {fileID: 171100, guid: 7d2371bde3a16124cb47b8a3240354be, type: 2}
   scoreParent: {fileID: 2104223661}
   topRanks: 50
@@ -1643,7 +1644,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1258521310}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

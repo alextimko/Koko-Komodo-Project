@@ -10,7 +10,7 @@ using UnityEngine.UI;
 /// This script handles all communication with the database
 /// </summary>
 public class HighScoreManager : MonoBehaviour {
-
+	public GameObject EnteName;
     /// <summary>
     /// The connection string, this string tells the path to the database
     /// </summary>
@@ -122,7 +122,7 @@ public class HighScoreManager : MonoBehaviour {
             enterName.text = string.Empty; //resets the textfield
 
             ShowScores(); //Gets the scores form the database
-
+			EnteName.SetActive(false);
         }
     }
 

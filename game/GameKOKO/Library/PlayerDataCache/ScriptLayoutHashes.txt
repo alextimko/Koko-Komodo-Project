@@ -37,7 +37,7 @@ ba726e863b92745147f4e717f37de405 Assembly-CSharp.dll:.Player
 e1ecd31084d88724bd270922c2c81b1a Assembly-CSharp.dll:.CameraFollow
 81d3fa35f3270744d8c271fbb7597c65 Assembly-CSharp.dll:.ChangeStory
 06e6379599a177478ce28fdaecfe730c Assembly-CSharp.dll:.SkyLevel
-6645a88290b9abfa21026ffcfaeff9d9 Assembly-CSharp.dll:.HighScoreManager
+2647529c6ac1f7f4734107a573972e4a Assembly-CSharp.dll:.HighScoreManager
 925287bb033b16ef8f307268782f2141 Assembly-CSharp.dll:.PauseMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
